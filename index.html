@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereal Archives</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header1: Main header -->
+    <header class="header1">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/animated_logo_of_a_fairy_holding_a_small_book_and_sitting_on_a_big_book_with_a_modern_style_in_monochrome_color-removebg-preview.png" alt="Akashic Records Logo">
+                <h2>Ethereal Archives</h2>
+
+            </div>
+            <button id="themeToggle" class="theme-toggle" onclick="toggleTheme()">
+                <svg id="sunIcon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2V3" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M12 21V22" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M22 12L21 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M3 12L2 12" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M19.0708 4.92969L18.678 5.32252" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5.32178 18.6777L4.92894 19.0706" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M19.0708 19.0703L18.678 18.6775" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M5.32178 5.32227L4.92894 4.92943" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M6.34141 10C6.12031 10.6256 6 11.2987 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C11.2987 6 10.6256 6.12031 10 6.34141" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <svg id="moonIcon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.9001 2.30719C19.7392 1.8976 19.1616 1.8976 19.0007 2.30719L18.5703 3.40247C18.5212 3.52752 18.4226 3.62651 18.298 3.67583L17.2067 4.1078C16.7986 4.26934 16.7986 4.849 17.2067 5.01054L18.298 5.44252C18.4226 5.49184 18.5212 5.59082 18.5703 5.71587L19.0007 6.81115C19.1616 7.22074 19.7392 7.22074 19.9001 6.81116L20.3305 5.71587C20.3796 5.59082 20.4782 5.49184 20.6028 5.44252L21.6941 5.01054C22.1022 4.849 22.1022 4.26934 21.6941 4.1078L20.6028 3.67583C20.4782 3.62651 20.3796 3.52752 20.3305 3.40247L19.9001 2.30719Z" stroke="#1C274C"/>
+                    <path d="M16.0328 8.12967C15.8718 7.72009 15.2943 7.72009 15.1333 8.12967L14.9764 8.52902C14.9273 8.65407 14.8287 8.75305 14.7041 8.80237L14.3062 8.95987C13.8981 9.12141 13.8981 9.70107 14.3062 9.86261L14.7041 10.0201C14.8287 10.0694 14.9273 10.1684 14.9764 10.2935L15.1333 10.6928C15.2943 11.1024 15.8718 11.1024 16.0328 10.6928L16.1897 10.2935C16.2388 10.1684 16.3374 10.0694 16.462 10.0201L16.8599 9.86261C17.268 9.70107 17.268 9.12141 16.8599 8.95987L16.462 8.80237C16.3374 8.75305 16.2388 8.65407 16.1897 8.52902L16.0328 8.12967Z" stroke="#1C274C"/>
+                    <path d="M21.0672 11.8568L20.4253 11.469L21.0672 11.8568ZM12.1432 2.93276L11.7553 2.29085V2.29085L12.1432 2.93276ZM7.37554 20.013C7.017 19.8056 6.5582 19.9281 6.3508 20.2866C6.14339 20.6452 6.26591 21.104 6.62446 21.3114L7.37554 20.013ZM2.68862 17.3755C2.89602 17.7341 3.35482 17.8566 3.71337 17.6492C4.07191 17.4418 4.19443 16.983 3.98703 16.6245L2.68862 17.3755ZM21.25 12C21.25 17.1086 17.1086 21.25 12 21.25V22.75C17.9371 22.75 22.75 17.9371 22.75 12H21.25ZM2.75 12C2.75 6.89137 6.89137 2.75 12 2.75V1.25C6.06294 1.25 1.25 6.06294 1.25 12H2.75ZM15.5 14.25C12.3244 14.25 9.75 11.6756 9.75 8.5H8.25C8.25 12.5041 11.4959 15.75 15.5 15.75V14.25ZM20.4253 11.469C19.4172 13.1373 17.5882 14.25 15.5 14.25V15.75C18.1349 15.75 20.4407 14.3439 21.7092 12.2447L20.4253 11.469ZM9.75 8.5C9.75 6.41182 10.8627 4.5828 12.531 3.57467L11.7553 2.29085C9.65609 3.5593 8.25 5.86509 8.25 8.5H9.75ZM12 2.75C11.9115 2.75 11.8077 2.71008 11.7324 2.63168C11.6686 2.56527 11.6538 2.50244 11.6503 2.47703C11.6461 2.44587 11.6482 2.35557 11.7553 2.29085L12.531 3.57467C13.0342 3.27065 13.196 2.71398 13.1368 2.27627C13.0754 1.82126 12.7166 1.25 12 1.25V2.75ZM21.7092 12.2447C21.6444 12.3518 21.5541 12.3539 21.523 12.3497C21.4976 12.3462 21.4347 12.3314 21.3683 12.2676C21.2899 12.1923 21.25 12.0885 21.25 12H22.75C22.75 11.2834 22.1787 10.9246 21.7237 10.8632C21.286 10.804 20.7293 10.9658 20.4253 11.469L21.7092 12.2447ZM12 21.25C10.3139 21.25 8.73533 20.7996 7.37554 20.013L6.62446 21.3114C8.2064 22.2265 10.0432 22.75 12 22.75V21.25ZM3.98703 16.6245C3.20043 15.2647 2.75 13.6861 2.75 12H1.25C1.25 13.9568 1.77351 15.7936 2.68862 17.3755L3.98703 16.6245Z" fill="#1C274C"/>
+                </svg>
+
+            </button>     
+            <button id="authButton" class="auth-btn" onclick="redirectToMaintain()">Sign In/Sign Up</button>
+            <button id="profileButton" class="profile-button" onclick="redirectToMaintain()" style="display: none;">
+                <img src="assets/Untitled design.png" alt="User Avatar" >
+            </button>
+    </header>
+
+    <!-- Divider line -->
+    <hr class="divider">
+
+    <!-- Header2: Sub header -->
+    <header class="header2">
+        <div class="container">
+            <button class="home-btn" onclick="goToHome()">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 22L2 22"  stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M2 11L6.06296 7.74968M22 11L13.8741 4.49931C12.7784 3.62279 11.2216 3.62279 10.1259 4.49931L9.34398 5.12486" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M15.5 5.5V3.5C15.5 3.22386 15.7239 3 16 3H18.5C18.7761 3 19 3.22386 19 3.5V8.5"  stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M4 22V9.5" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M20 9.5V13.5M20 22V17.5"  stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M15 22V17C15 15.5858 15 14.8787 14.5607 14.4393C14.1213 14 13.4142 14 12 14C10.5858 14 9.87868 14 9.43934 14.4393M9 22V17"  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 9.5C14 10.6046 13.1046 11.5 12 11.5C10.8954 11.5 10 10.6046 10 9.5C10 8.39543 10.8954 7.5 12 7.5C13.1046 7.5 14 8.39543 14 9.5Z"  stroke-width="1.5"/>
+                    </svg>Home</button>
+            <button class="tab-btn active" id="novelTab" onclick="goToNovel()">
+               <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 6.90909C10.8999 5.50893 9.20406 4.10877 5.00119 4.00602C4.72513 3.99928 4.5 4.22351 4.5 4.49965C4.5 6.54813 4.5 14.3034 4.5 16.597C4.5 16.8731 4.72515 17.09 5.00114 17.099C9.20405 17.2364 10.8999 19.0998 12 20.5M12 6.90909C13.1001 5.50893 14.7959 4.10877 18.9988 4.00602C19.2749 3.99928 19.5 4.21847 19.5 4.49461C19.5 6.78447 19.5 14.3064 19.5 16.5963C19.5 16.8724 19.2749 17.09 18.9989 17.099C14.796 17.2364 13.1001 19.0998 12 20.5M12 6.90909L12 20.5" stroke-linejoin="round"/>
+  <path d="M19.2353 6H21.5C21.7761 6 22 6.22386 22 6.5V19.539C22 19.9436 21.5233 20.2124 21.1535 20.0481C20.3584 19.6948 19.0315 19.2632 17.2941 19.2632C14.3529 19.2632 12 21 12 21C12 21 9.64706 19.2632 6.70588 19.2632C4.96845 19.2632 3.64156 19.6948 2.84647 20.0481C2.47668 20.2124 2 19.9436 2 19.539V6.5C2 6.22386 2.22386 6 2.5 6H4.76471" stroke-linejoin="round"/>
+</svg>Novel</button>
+            <button class="tab-btn" id="postTab" onclick="redirectToMaintain()">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 15H12C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3H8C4.68629 3 2 5.68629 2 9C2 10.5367 2.57771 11.9385 3.52779 13M16 21C19.3137 21 22 18.3137 22 15C22 13.4633 21.4223 12.0615 20.4722 11M12 21C8.68629 21 6 18.3137 6 15C6 11.6863 8.68629 9 12 9H14"  stroke-width="1.5" stroke-linecap="round"/>
+</svg>Post</button>
+            <button class="notice-btn" onclick="goToNotice()">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+                    <title>notice-active</title>
+                    <desc>Created with sketchtool.</desc>
+                    <g id="web-app" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="notice-active" fill="#ffffff">
+                            <path d="M15.0846417,4.85258583 C15.3698859,3.78571001 16.3431867,3 17.5,3 C18.8807119,3 20,4.11928813 20,5.5 C20,6.82802369 18.9645064,7.9141949 17.6568748,7.99515796 C17.8790698,8.62208363 18,9.29691944 18,10 L18,16 L19,16 C19.5499992,16 20,16.4500008 20,17 C20,17.5499992 19.5499992,18 19,18 L15,18 L15,19 C15,20.6568542 13.6568542,22 12,22 C10.3431458,22 9,20.6568542 9,19 L9,18 L5,18 C4.44999981,18 4,17.5499992 4,17 C4,16.4500008 4.44999981,16 5,16 L6,16 L6,10 C6,7.02700371 8.16228666,4.55903653 11,4.08295844 L11,3 C11,2.44771525 11.4477153,2 12,2 C12.5522847,2 13,2.44771525 13,3 L13,4.08295844 C13.7514465,4.20902728 14.4555302,4.47477291 15.0846417,4.85258583 Z M12,20 C12.5522847,20 13,19.5522847 13,19 C13,18.7251922 13,18.3918589 13,18 L11,18 C11,18.470365 11,18.8036984 11,19 C11,19.5522847 11.4477153,20 12,20 Z M8,16 L16,16 L16,10 C16,7.790861 14.209139,6 12,6 C9.790861,6 8,7.790861 8,10 L8,16 Z" id="Shape">
+                
+                </path>
+                        </g>
+                    </g>
+                </svg>Notices</button>
+            <button class="write-btn" id="write" onclick="goToWrite()">
+                <svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="3"  fill="none"><path d="M55.5,23.9V53.5a2,2,0,0,1-2,2h-43a2,2,0,0,1-2-2v-43a2,2,0,0,1,2-2H41.64"/><path d="M19.48,38.77l-.64,5.59a.84.84,0,0,0,.92.93l5.56-.64a.87.87,0,0,0,.5-.24L54.9,15.22a1.66,1.66,0,0,0,0-2.35L51.15,9.1a1.67,1.67,0,0,0-2.36,0L19.71,38.28A.83.83,0,0,0,19.48,38.77Z"/><line x1="44.87" y1="13.04" x2="50.9" y2="19.24"/></svg>Write</button>
+        </div>
+    </header>
+
+    <!-- Body Section (Blank for now) -->
+    <main class="content">
+        <!-- Future content will go here -->
+         <!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-slide">
+        <!-- First novel ad -->
+        <div class="hero-item active">
+            <img src="assets/anime style digital art with a valley and mountains visible and fairies dancing on it for day time.png" alt="Default Image" class="hero-background"> <!-- Placeholder image for aanovel -->
+            <div class="hero-content">
+                <h2>Default</h2>
+                <p>This is an Default</p>
+            </div>
+        </div>
+
+        <!-- Second novel ad -->
+        <div class="hero-item">
+            <img src="assets/anime style digital art with a valley and mountains visible and fairies dancing on it for night time, replace sun with moon.png" alt="Default Image" class="hero-background"> <!-- Placeholder image for novelaa2 -->
+            <div class="hero-content">
+                <h2>Default</h2>
+                <p>This is an Default</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.hero-item');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if(i === index){
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    setInterval(nextSlide, 3000);
+    showSlide(currentSlide);
+</script>
+<!-- Main Content Area -->
+<div class="main-content">
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Adult</a></li>
+            <li><a href="#">Adventure</a></li>
+            <li><a href="#">BL</a></li>
+            <li><a href="#">Comedy</a></li>
+            <li><a href="#">Drama</a></li>
+            <li><a href="#">Eastern</a></li>
+            <li><a href="#">Eastern</a></li>
+            <li><a href="#">Ecchi</a></li>
+            <li><a href="#">Exclusive</li>
+            <li><a href="#">Fantasy</a>
+            <li><a href="#">Game</a></li>
+            <li><a href="#">Gender bender</a></li>
+            <li><a href="#">Harem</a></li>
+            <li><a href="#">Historical</a></li>
+            <li><a href="#">Horror</a></li>
+            <li><a href="#">Josei</a></li>
+            <li><a href="#">Mature</a></li>
+            <li><a href="#">Mecha</a></li>
+            <li><a href="#">Mystery</a></li>
+            <li><a href="#">psychological</a></li>
+            <li><a href="#">Reincarnation</a></li>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">School Life</a></li>
+            <li><a href="#">SCi-fi</a></li>
+            <li><a href="#">Slice of life</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Supernatural</a></li>
+            <li><a href="#">Tragedy</a></li>
+        </ul>
+    </aside>
+
+
+    <!-- Middle Section -->
+<section class="middle-section">
+    <h2>Featured Novels</h2>
+    <div class="featured-novels">
+        <div class="novel-card">
+            <a href="novel1.html">
+                <img src="assets/aniubdhubfdybfjbifboi.png" alt="Novel Title 1">
+                <h3>Deafult</h3>
+            </a>
+        </div>
+        <div class="novel-card">
+            <a href="novel2.html">
+                <img src="assets/aniubdhubfdybfjbifboi.png" alt="Novel Title 2">
+                <h3>Default</h3>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Right Sidebar -->
+    <aside class="right-sidebar">
+        <h3>Recently Updated Novels</h3>
+        <ul>
+            <div class="recently-uploaded">
+                 <div class="novel">
+                  <li><a href="#">Default</li>
+                  <p class="update-time" data-updated="2024-10-28T14:00:00">Updated just now</p>
+                   </div>
+  <!-- Add more novels here -->
+                   </div>
+        </ul>
+    </aside>
+</div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="assets/animated_logo_of_a_fairy_holding_a_small_book_and_sitting_on_a_big_book_with_a_modern_style_in_monochrome_color-removebg-preview.png" alt="Akashic Records Logo">
+                <h2>Ethereal Archives</h2>
+                <p>Unlocking Infinite Stories</p>
+            </div>
+           
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <p>&copy; 2024 Akashic Records. All rights reserved.</p>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

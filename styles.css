@@ -1,0 +1,384 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header1 styles */
+.header1 {
+    background-color: #8b02b9;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header1 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header1 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header1 .logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.auth-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: left;
+}
+/* Updated theme-toggle styles */
+.theme-toggle {
+    display: flex;
+    align-items: left;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #dddddd00;
+    color: #333;
+    margin-left: 10px; /* Space between sign-in and theme toggle */
+    display: inline-block; /* Align with other buttons */
+}
+.theme-toggle button{
+    background-color: #8b02b9;
+}
+button#themeToggle svg {
+    width: 24px;
+    height: 24px;
+    fill: #000;
+    transition: fill 0.3s ease;
+}
+
+.theme-toggle.dark-mode {
+    background-color: #333;
+    color: #ddd;
+}
+/* In your CSS */
+#profileButton {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Makes it circular */
+    overflow: hidden; /* Ensures the image fits within the circle */
+    border: none; /* Optional: remove default button border */
+    padding: 0; /* Remove padding for exact fit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#profileButton img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle evenly */
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Adjust other elements as needed for dark mode */
+.header1, .header2, .footer, .left-sidebar, .right-sidebar, .middle-section {
+    background-color: #8b01ae;
+    color: #f1f1f1;
+}
+
+/* Links */
+a {
+    color: #f0a500; /* Example color for dark mode links */
+}
+
+
+/* Divider line */
+.divider {
+    margin: 0;
+    border: none;
+    border-top: 2px solid #ccc;
+}
+
+/* Header2 styles */
+.header2 {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+.header2 .container {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    gap : 4px;
+}
+.home-btn svg, .tab-btn.active svg, .tab-btn svg, .notice-btn svg, .write-btn svg {
+    fill: none;
+    stroke: #ffffff;
+    margin-right : 5px;
+    height : 24px;
+    width : 24px;
+    display: flex;
+    flex-direction: column;
+    position: top;
+    align-items: center;
+}
+
+.header2 button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.header2 .tab-btn.active {
+    border-bottom: 2px solid #007BFF;
+    align-items: center;
+}
+.header2.notice-btn{
+    border-bottom: 2px solid #007BFF;
+    align-items: right;
+    justify-content: center;
+}
+.header2.write-btn{
+    border-bottom: 2px solid #007BFF;
+    align-items: right;
+    justify-content: center;
+}
+/* Body content styles */
+main.content {
+    min-height: 100%; /* Ensure there is space for the body content */
+    padding: 0px;
+    text-align: center;
+}
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    height: 250px; /* Adjust the height as needed */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling each slide item */
+.hero-slide {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.hero-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px;
+    transition: all 0.5s ease-in-out;
+}
+.hero-item.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%; /* Adjust image size */
+    height: 100%; /* Adjust image size */
+    object-fit: cover;
+}
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    margin: 10px 0;
+    font-size: 32px;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); ;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #777;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* You can add sliding or transition effects if needed */
+/* Main Content Area */
+.main-content {
+    display: flex;                /* Use flexbox to align items */
+    width: 100%;                 /* Full width */
+    padding: 0px;
+    margin-top: 10px;           /* Space between header and main content */
+}
+
+/* Left Sidebar */
+.left-sidebar {
+    flex: 1;                     /* Takes 1 part of the available space */
+    background-color: #f8f8f8;  /* Light background for visibility */
+    padding: 20px;              /* Padding for better spacing */
+    border-right: 1px solid #ddd; /* Border to separate from middle section */
+}
+
+/* Middle Section */
+.middle-section {
+    flex: 2;                     /* Takes 2 parts of the available space */
+    padding: 0px;              /* Padding for better spacing */
+}
+/* Middle Section Styles */
+.middle-section {
+    padding: 20px;               /* Padding for the middle section */
+}
+
+/* Featured Novels */
+.featured-novels {
+    display: flex;               /* Use flexbox for layout */
+    justify-content: space-around; /* Space between cards */
+    flex-wrap: wrap;            /* Wrap cards if they exceed container width */
+}
+
+.novel-card {
+    background-color: #fff;     /* White background for cards */
+    border: 1px solid #ddd;     /* Light border */
+    border-radius: 5px;         /* Rounded corners */
+    padding: 15px;              /* Padding inside cards */
+    margin: 10px;               /* Margin between cards */
+    width: 45%;                 /* Card width (45% to fit two side by side) */
+    text-align: center;         /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.novel-card img {
+    max-width: 100%;            /* Responsive image */
+    height: auto;               /* Maintain aspect ratio */
+    border-radius: 5px;         /* Round image corners */
+}
+
+.novel-card h3 {
+    margin: 10px 0;             /* Margin for title */
+    font-size: 18px;            /* Font size for title */
+    color: #333;                /* Dark text color */
+}
+
+
+/* Right Sidebar */
+.right-sidebar {
+    flex: 1;                     /* Takes 1 part of the available space */
+    background-color: #aeaeae;  /* Light background for visibility */
+    padding: 20px;              /* Padding for better spacing */
+    border-left: 1px solid #ddd; /* Border to separate from middle section */
+}
+.left-sidebar {
+    background-color: #aeaeae;
+}
+
+/* Sidebar Headings */
+.left-sidebar h3, .right-sidebar h3 {
+    margin-top: 0;              /* Remove top margin */
+    color: red;
+}
+
+/* Sidebar Links */
+.left-sidebar ul, .right-sidebar ul {
+    list-style-type: none;      /* Remove bullet points */
+    padding: 0;                 /* Remove padding */
+}
+
+.left-sidebar li, .right-sidebar li {
+    margin: 10px 0;             /* Spacing between items */
+}
+
+.left-sidebar a, .right-sidebar a {
+    text-decoration: none;       /* Remove underline from links */
+    color: #333;                /* Dark color for links */
+}
+
+.left-sidebar a:hover, .right-sidebar a:hover {
+    text-decoration: underline;  /* Underline on hover */
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 50px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.footer-logo span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-logo p {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.genres ul, .footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.genres ul li, .footer-links ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
