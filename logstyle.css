@@ -1,0 +1,103 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #c211b985;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('assets/aniubdhubfdybfjbifboi.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Auth Container Styling */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+.logo-con {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Login and Sign Up Container Styling */
+.login-container, .signup-container {
+    background-color: #bd14f0eb;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Form Header Styling */
+.login-form h2, .signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Form Label Styling */
+.login-form label, .signup-form label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #000000;
+}
+
+/* Form Input Styling */
+.login-form input[type="text"], 
+.login-form input[type="email"], 
+.login-form input[type="password"], 
+.signup-form input[type="text"], 
+.signup-form input[type="email"], 
+.signup-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Button Styling */
+.login-form button, .signup-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #45dc2e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover, .signup-form button:hover {
+    background-color: #0d33f3c3;
+}
+
+/* Link Styling */
+.login-form p, .signup-form p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.login-form a, .signup-form a {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+.login-form a:hover, .signup-form a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up - Ethereal Archives</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="logstyle.css">
+</head>
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div class="login-container" id="loginContainer">
+            <form class="login-form" onsubmit="event.preventDefault(); login();">
+                <div class="logo-con">
+                    <img src="assets/animated_logo_of_a_fairy_holding_a_small_book_and_sitting_on_a_big_book_with_a_modern_style_in_monochrome_color-removebg-preview.png" alt="Akashic Records Logo" class="logo">
+                </div>
+                <h2>Welcome to Ethereal Archives</h2>
+                <p>Unlocking Infinite Stories</p>
+                <h2>Login</h2>
+
+                <label for="login-email">Email</label>
+                <input type="text" id="login-email" name="email" placeholder="Enter your email" required>
+
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+
+                <button type="submit">Login</button>
+                <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+            </form>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="signup-container" id="signupContainer" style="display: none;">
+            <form class="signup-form" onsubmit="event.preventDefault(); signUp();">
+                <h2>Create Your Account</h2>
+
+                <label for="signup-email">Email</label>
+                <input type="text" id="signup-email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" id="loginLink">Login</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+    <script src="logscript.js"></script>
+</body>
+</html>

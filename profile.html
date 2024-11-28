@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fav/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profilestyle.css">
+</head>
+<body>
+
+<header class="header1">
+    <div class="container">
+        <div class="logo">
+            <img src="assets/animated_logo_of_a_fairy_holding_a_small_book_and_sitting_on_a_big_book_with_a_modern_style_in_monochrome_color-removebg-preview.png" alt="Akashic Records Logo">
+            <h2>Ethereal Archives</h2>
+        
+</header>
+<hr class="divider">
+<header class="header2">
+    <div class="container">
+        <button class="home-btn" onclick="goToHome()">Back</button>
+        <button class="home-btn" onclick="goToProfile()">Author Profile</button>
+        <button class="home-btn" onclick="logout()">logout</button> 
+    </div>
+</header>
+
+<main class="profile-container">
+    <div class="profile-info-left">
+        <img src="assets/Untitled design.png" alt="Profile Picture" class="profile-avatar">
+        <p>Username: <span id="username"></span></p>
+        <button class="btn" onclick="editProfile()">Edit Profile</button>
+    </div>
+    <!-- Edit Profile Modal -->
+<div id="editProfileModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Edit Profile</h2>
+        
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" placeholder="Enter new username" maxlength="20">
+        
+        <h3>Choose Profile Picture:</h3>
+        <div class="profile-pic-options">
+            <img src="assets/anime chibi male elf.png" alt="Profile Pic 1" onclick="selectProfilePic('assets/anime chibi male elf.png')">
+            <img src="assets/anime chibi female elf.png" alt="Profile Pic 2" onclick="selectProfilePic('assets/anime chibi female elf.png')">
+            <img src="assets/anime chibi fox.png" alt="Profile Pic 3" onclick="selectProfilePic('assets/anime chibi fox.png')">
+            <img src="assets/anime chibi male vampire.png" alt="Profile Pic 4" onclick="selectProfilePic('assets/anime chibi male vampire.png')">
+        </div>
+        
+        <p>Selected Profile Picture:</p>
+        <img id="selectedProfilePic" class="selected-pic" src="assets/profilepic1.png" alt="Selected Profile Picture">
+
+        <button onclick="saveProfile()">Save Changes</button>
+    </div>
+</div>
+
+
+    <!-- Stats box -->
+    <div class="profile-stats">
+        <div class="stat-item" data-type="continueReading">
+            <span class="stat-number" data-stat="continueReading">0</span>
+            <p>Continue Reading</p>
+        </div>
+        <div class="stat-item" data-type="posts">
+            <span class="stat-number" data-stat="posts">0</span>
+            <p>Posts</p>
+        </div>
+        <div class="stat-item" data-type="comments">
+            <span class="stat-number" data-stat="comments">0</span>
+            <p>Comments</p>
+        </div>
+        <div class="stat-item" data-type="saved">
+            <span class="stat-number" data-stat="saved">0</span>
+            <p>Saved</p>
+        </div>
+        <div class="stat-item" data-type="bookmark">
+            <span class="stat-number" data-stat="bookmarks">0</span>
+            <p>Bookmarks</p>
+        </div>
+    </div>
+    
+</main>
+
+<footer>
+    <div class="footer-container">
+        <p>&copy; 2024 Akashic Records. All rights reserved.</p>
+    </div>
+</footer>
+<script type="module" src="auth.js"></script>
+<script src="profilescript.js"></script>
+</body>
+</html>
