@@ -61,10 +61,6 @@ body {
     display: inline-block;
 }
 
-.theme-toggle button {
-    background-color: #8b02b9;
-}
-
 button#themeToggle svg {
     width: 1.5rem; /* 24px -> 1.5rem */
     height: 1.5rem; /* 24px -> 1.5rem */
@@ -135,14 +131,6 @@ a {
     gap: 0.25rem; /* 4px -> 0.25rem */
 }
 
-.home-btn svg, .tab-btn.active svg, .tab-btn svg, .notice-btn svg, .write-btn svg {
-    fill: none;
-    stroke: #ffffff;
-    margin-right: 0.3125rem; /* 5px -> 0.3125rem */
-    height: 1.5rem; /* 24px -> 1.5rem */
-    width: 1.5rem; /* 24px -> 1.5rem */
-}
-
 .header2 button {
     background: none;
     border: none;
@@ -152,11 +140,6 @@ a {
 }
 
 .header2 .tab-btn.active {
-    border-bottom: 0.125rem solid #007BFF; /* 2px -> 0.125rem */
-}
-
-.header2.notice-btn,
-.header2.write-btn {
     border-bottom: 0.125rem solid #007BFF; /* 2px -> 0.125rem */
 }
 
@@ -182,192 +165,64 @@ main.content {
     justify-content: center;
 }
 
-.hero-item {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin: 0 1.25rem; /* 20px -> 1.25rem */
-    transition: all 0.5s ease-in-out;
-}
-
 .hero-item.active {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    color: #ffffff;
-    text-align: center;
-    z-index: 2;
-}
-
-.hero-content h2 {
-    margin: 0.625rem 0; /* 10px -> 0.625rem */
-    font-size: 2rem; /* 32px -> 2rem */
-    color: #ffffff;
-    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7); /* 2px 2px 4px -> rem */
-}
-
-.hero-content p {
-    font-size: 1.125rem; /* 18px -> 1.125rem */
-    color: #777;
-    text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
-}
-
-/* Continued... */
-/* Main Content Area */
-.main-content {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin-top: 0.625rem; /* 10px -> 0.625rem */
-}
-
 /* Left Sidebar */
 .left-sidebar {
     flex: 1;
     background-color: #f8f8f8;
-    padding: 1.25rem; /* 20px -> 1.25rem */
-    border-right: 0.0625rem solid #ddd; /* 1px -> 0.0625rem */
-}
-
-/* Middle Section */
-.middle-section {
-    flex: 2;
-    padding: 0;
-}
-
-/* Featured Novels */
-.featured-novels {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.novel-card {
-    background-color: #fff;
-    border: 0.0625rem solid #ddd; /* 1px -> 0.0625rem */
-    border-radius: 0.3125rem; /* 5px -> 0.3125rem */
-    padding: 0.9375rem; /* 15px -> 0.9375rem */
-    margin: 0.625rem; /* 10px -> 0.625rem */
-    width: 45%;
-    text-align: center;
-    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1); /* 2px -> 0.125rem */
-}
-
-.novel-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.3125rem;
-}
-
-.novel-card h3 {
-    margin: 0.625rem 0; /* 10px -> 0.625rem */
-    font-size: 1.125rem; /* 18px -> 1.125rem */
-    color: #333;
-}
-
-/* Right Sidebar */
-.right-sidebar {
-    flex: 1;
-    background-color: #aeaeae;
-    padding: 1.25rem; /* 20px -> 1.25rem */
-    border-left: 0.0625rem solid #ddd; /* 1px -> 0.0625rem */
-}
-
-.left-sidebar {
-    background-color: #aeaeae;
-}
-
-/* Sidebar Headings */
-.left-sidebar h3, .right-sidebar h3 {
-    margin-top: 0;
-    color: red;
-}
-
-/* Sidebar Links */
-.left-sidebar ul, .right-sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.left-sidebar li, .right-sidebar li {
-    margin: 0.625rem 0; /* 10px -> 0.625rem */
-}
-
-.left-sidebar a, .right-sidebar a {
-    text-decoration: none;
-    color: #333;
-}
-
-.left-sidebar a:hover, .right-sidebar a:hover {
-    text-decoration: underline;
+    padding: 1.25rem;
+    border-right: 0.0625rem solid #ddd;
 }
 
 /* Footer styles */
 footer {
     background-color: #1e1e1e;
     color: #fff;
-    padding: 2.5rem 0; /* 40px -> 2.5rem */
+    padding: 2.5rem 0;
     text-align: center;
 }
 
-.footer-container {
-    width: 90%;
-    margin: 0 auto;
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .header1 .container, .header2 .container, .footer-container {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .header1 .logo img, #profileButton {
+        height: 2.5rem;
+    }
+
+    .auth-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .hero-section {
+        height: 12.5rem; /* 200px */
+    }
+
+    .left-sidebar, .right-sidebar {
+        display: none; /* Hide sidebars */
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .featured-novels .novel-card {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    footer {
+        padding: 1.5rem 0;
+    }
 }
 
-.footer-logo img {
-    height: 3.125rem; /* 50px -> 3.125rem */
-    margin-bottom: 0.625rem; /* 10px -> 0.625rem */
-    align-items: center;
-}
-
-.footer-logo span {
-    font-size: 1.25rem; /* 20px -> 1.25rem */
-    font-weight: bold;
-}
-
-.footer-logo p {
-    margin-top: 0.3125rem; /* 5px -> 0.3125rem */
-    font-style: italic;
-}
-
-.genres ul, .footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.genres ul li, .footer-links ul li {
-    display: inline;
-    margin: 0 0.9375rem; /* 15px -> 0.9375rem */
-}
-
-.footer-links ul li a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.footer-links ul li a:hover {
-    text-decoration: underline;
-}
